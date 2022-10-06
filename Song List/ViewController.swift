@@ -12,7 +12,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tvView: UITableView!
     
     let music = [Song(songName: "Suicide Season", songAuthor: "Bring me the Horizon", songImageUrl: "https://m.media-amazon.com/images/I/51XvDTAGK+L._SY355_.jpg"),
-    Song(songName: "Tristre", songAuthor: "Recycled J", songImageUrl: "String")]
+                 Song(songName: "Tristre", songAuthor: "Recycled J", songImageUrl: "https://www.mondosonoro.com/wp-content/uploads/2021/09/Recycled-J-Sad-Summer.jpg"),
+                 Song(songName: "Bury the Light", songAuthor: "Devil May Cry V", songImageUrl: "https://m.media-amazon.com/images/I/91AQgKlTZsL._SS500_.jpg")]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return music.count
