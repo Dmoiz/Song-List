@@ -14,7 +14,7 @@
 		2FDC6E0428ECAD030082C3DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC6E0328ECAD030082C3DD /* Assets.xcassets */; };
 		2FDC6E0728ECAD030082C3DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC6E0528ECAD030082C3DD /* LaunchScreen.storyboard */; };
 		2FDC6E1328ECB6010082C3DD /* SongList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC6E1228ECB6010082C3DD /* SongList.swift */; };
-		2FDC6E1528ECB6400082C3DD /* SongData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC6E1428ECB6400082C3DD /* SongData.swift */; };
+		2FDC6E1528ECB6400082C3DD /* DataSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC6E1428ECB6400082C3DD /* DataSong.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		2FDC6E0628ECAD030082C3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2FDC6E0828ECAD030082C3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FDC6E1228ECB6010082C3DD /* SongList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongList.swift; sourceTree = "<group>"; };
-		2FDC6E1428ECB6400082C3DD /* SongData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongData.swift; sourceTree = "<group>"; };
+		2FDC6E1428ECB6400082C3DD /* DataSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSong.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 				2FDC6DFC28ECAD020082C3DD /* SceneDelegate.swift */,
 				2FDC6DFE28ECAD020082C3DD /* ViewController.swift */,
 				2FDC6E1228ECB6010082C3DD /* SongList.swift */,
-				2FDC6E1428ECB6400082C3DD /* SongData.swift */,
+				2FDC6E1428ECB6400082C3DD /* DataSong.swift */,
 				2FDC6E0028ECAD020082C3DD /* Main.storyboard */,
 				2FDC6E0328ECAD030082C3DD /* Assets.xcassets */,
 				2FDC6E0528ECAD030082C3DD /* LaunchScreen.storyboard */,
@@ -147,7 +147,7 @@
 				2FDC6E1328ECB6010082C3DD /* SongList.swift in Sources */,
 				2FDC6DFF28ECAD020082C3DD /* ViewController.swift in Sources */,
 				2FDC6DFB28ECAD020082C3DD /* AppDelegate.swift in Sources */,
-				2FDC6E1528ECB6400082C3DD /* SongData.swift in Sources */,
+				2FDC6E1528ECB6400082C3DD /* DataSong.swift in Sources */,
 				2FDC6DFD28ECAD020082C3DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
