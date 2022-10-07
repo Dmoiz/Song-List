@@ -33,35 +33,35 @@
                                                         <constraint firstAttribute="width" secondItem="38Q-GO-kh8" secondAttribute="height" multiplier="17:18" id="0sA-EQ-2OF"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfq-mk-yV7" userLabel="Song">
-                                                    <rect key="frame" x="195" y="10" width="180" height="60"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06V-XY-2hE" userLabel="Autor">
+                                                    <rect key="frame" x="195" y="50" width="180" height="140"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06V-XY-2hE" userLabel="Autor">
-                                                    <rect key="frame" x="195" y="120" width="180" height="70"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfq-mk-yV7" userLabel="Song">
+                                                    <rect key="frame" x="195" y="10" width="180" height="140"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="kfq-mk-yV7" firstAttribute="leading" secondItem="38Q-GO-kh8" secondAttribute="trailing" constant="15" id="0ti-b0-Wvo"/>
-                                                <constraint firstItem="kfq-mk-yV7" firstAttribute="top" secondItem="kR6-zt-yll" secondAttribute="top" constant="10" id="EDf-49-Mf8"/>
+                                                <constraint firstItem="kfq-mk-yV7" firstAttribute="top" secondItem="kR6-zt-yll" secondAttribute="top" constant="10" id="36S-0p-Lmd"/>
+                                                <constraint firstAttribute="trailing" secondItem="06V-XY-2hE" secondAttribute="trailing" constant="15" id="ALY-bl-YUp"/>
+                                                <constraint firstItem="06V-XY-2hE" firstAttribute="leading" secondItem="38Q-GO-kh8" secondAttribute="trailing" constant="15" id="EbF-pw-oZI"/>
                                                 <constraint firstItem="38Q-GO-kh8" firstAttribute="top" secondItem="kR6-zt-yll" secondAttribute="top" constant="10" id="Ewt-0o-ZaJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="06V-XY-2hE" secondAttribute="bottom" constant="10" id="I1C-gN-UhA"/>
-                                                <constraint firstItem="06V-XY-2hE" firstAttribute="leading" secondItem="38Q-GO-kh8" secondAttribute="trailing" constant="15" id="IJz-5B-2YN"/>
+                                                <constraint firstAttribute="trailing" secondItem="kfq-mk-yV7" secondAttribute="trailing" constant="15" id="JlV-67-bNI"/>
                                                 <constraint firstItem="38Q-GO-kh8" firstAttribute="leading" secondItem="kR6-zt-yll" secondAttribute="leading" constant="10" id="S6t-g7-UJv"/>
+                                                <constraint firstAttribute="bottom" secondItem="06V-XY-2hE" secondAttribute="bottom" constant="10" id="SeG-rl-ke7"/>
                                                 <constraint firstAttribute="bottom" secondItem="38Q-GO-kh8" secondAttribute="bottom" constant="10" id="WE6-We-LJl"/>
-                                                <constraint firstAttribute="trailing" secondItem="06V-XY-2hE" secondAttribute="trailing" constant="15" id="daP-iq-8Zx"/>
-                                                <constraint firstItem="06V-XY-2hE" firstAttribute="top" secondItem="kfq-mk-yV7" secondAttribute="bottom" constant="50" id="hwb-Ve-Hmb"/>
                                                 <constraint firstItem="38Q-GO-kh8" firstAttribute="top" secondItem="kR6-zt-yll" secondAttribute="topMargin" priority="999" constant="10" id="j9q-Wr-gNX"/>
-                                                <constraint firstAttribute="trailing" secondItem="kfq-mk-yV7" secondAttribute="trailing" constant="15" id="lu8-5h-439"/>
+                                                <constraint firstItem="06V-XY-2hE" firstAttribute="top" secondItem="kR6-zt-yll" secondAttribute="top" constant="50" id="mCC-Vm-tAn"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="38Q-GO-kh8" secondAttribute="bottom" priority="999" constant="10" id="nvD-Xr-XyK"/>
-                                                <constraint firstAttribute="bottom" secondItem="kfq-mk-yV7" secondAttribute="bottom" constant="130" id="rU3-c2-fHw"/>
+                                                <constraint firstAttribute="bottom" secondItem="kfq-mk-yV7" secondAttribute="bottom" constant="50" id="qN8-Uo-jaq"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="38Q-GO-kh8" secondAttribute="trailing" constant="190" id="tTS-li-g4V"/>
                                                 <constraint firstItem="38Q-GO-kh8" firstAttribute="leading" secondItem="kR6-zt-yll" secondAttribute="leadingMargin" priority="999" constant="10" id="vMI-uw-IMY"/>
+                                                <constraint firstItem="kfq-mk-yV7" firstAttribute="leading" secondItem="38Q-GO-kh8" secondAttribute="trailing" constant="15" id="vlv-PV-T4K"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
