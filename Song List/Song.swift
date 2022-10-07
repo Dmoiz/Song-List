@@ -23,7 +23,7 @@ class Song : dataSongs {
         return song
     }
     
-    func getSubTitle() -> String {
+    func getAuthor() -> String {
         return author
     }
     

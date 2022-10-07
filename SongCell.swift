@@ -12,4 +12,5 @@ class SongCell : UITableViewCell{
     @IBOutlet weak var lbSong: UILabel!
     @IBOutlet weak var lbAuthor: UILabel!
     @IBOutlet weak var ivPhoto: UIImageView!
+    
 }

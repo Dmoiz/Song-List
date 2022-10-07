@@ -15,6 +15,6 @@ protocol dataSongs {
     // Getters
     func getImageUrl() -> String
     func getTitle() -> String
-    func getSubTitle() -> String
+    func getAuthor() -> String
 
 }
