@@ -10,7 +10,7 @@ import UIKit
 
 class DetailVC : UIViewController {
 
-    
-    
+    @IBOutlet weak var ivImage: UIImageView!
+    @IBOutlet weak var lbSongName: UILabel!
     
 }

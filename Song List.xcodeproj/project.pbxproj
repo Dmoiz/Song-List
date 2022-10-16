@@ -73,11 +73,11 @@
 				2FDC6E1428ECB6400082C3DD /* DataSong.swift */,
 				2FF0128A28EF52FD00BC43A4 /* SongCell.swift */,
 				2FF0128828EF52C000BC43A4 /* Song.swift */,
+				2FCFD57C28F8BD7300F9B11A /* ImageViewCustom.swift */,
 				2FDC6E0028ECAD020082C3DD /* Main.storyboard */,
 				2FDC6E0328ECAD030082C3DD /* Assets.xcassets */,
 				2FDC6E0528ECAD030082C3DD /* LaunchScreen.storyboard */,
 				2FDC6E0828ECAD030082C3DD /* Info.plist */,
-				2FCFD57C28F8BD7300F9B11A /* ImageViewCustom.swift */,
 			);
 			path = "Song List";
 			sourceTree = "<group>";

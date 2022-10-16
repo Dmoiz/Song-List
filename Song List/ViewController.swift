@@ -57,6 +57,17 @@ class MainVC : UITableViewController {
         music.remove(at: sourceIndexPath.row)
         music.insert(movedObject, at: destinationIndexPath.row)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueToDetail"){
+            if let goToDetail = segue.destination as? DetailVC {
+                goToDetail.lbSongName.text = music[tableView.indexPathForSelectedRow!.row].getTitle()
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isEditing = true

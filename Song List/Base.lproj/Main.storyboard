@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songsCell" rowHeight="200" id="t1k-jd-cLn" customClass="SongCell" customModule="Song_List" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songsCell" rowHeight="200" id="t1k-jd-cLn" customClass="SongCell" customModule="Song_List" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="390" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t1k-jd-cLn" id="xdF-l7-xKd">
@@ -62,7 +62,7 @@
                                     <outlet property="ivPhoto" destination="bfg-hb-hUO" id="HYr-QU-NqU"/>
                                     <outlet property="lbAuthor" destination="yiq-xa-QwM" id="YkT-69-vAG"/>
                                     <outlet property="lbSong" destination="UQu-2m-KoT" id="LM1-IU-PZV"/>
-                                    <segue destination="WQT-o1-gnP" kind="showDetail" id="wZO-oW-0Mt"/>
+                                    <segue destination="WQT-o1-gnP" kind="showDetail" id="dIv-0v-ckb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -133,6 +133,11 @@
                             <constraint firstItem="KMy-nU-lyO" firstAttribute="top" secondItem="Y2w-oz-lSD" secondAttribute="bottom" constant="20" id="vx9-X9-htS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ajm-fg-aA4"/>
+                    <connections>
+                        <outlet property="ivImage" destination="9Uf-w4-y2w" id="eNk-ec-Mju"/>
+                        <outlet property="lbSongName" destination="0Px-Pi-O4y" id="cOf-hw-mr3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1o-Bz-RqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
