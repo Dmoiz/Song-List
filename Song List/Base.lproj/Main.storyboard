@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +24,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-hb-hUO">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="bfg-hb-hUO" customClass="ImageViewCustom" customModule="Song_List" customModuleProvider="target">
                                             <rect key="frame" x="10" y="10" width="180" height="180"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="bfg-hb-hUO" secondAttribute="height" multiplier="1:1" id="hjg-vd-xpW"/>
@@ -61,6 +62,7 @@
                                     <outlet property="ivPhoto" destination="bfg-hb-hUO" id="HYr-QU-NqU"/>
                                     <outlet property="lbAuthor" destination="yiq-xa-QwM" id="YkT-69-vAG"/>
                                     <outlet property="lbSong" destination="UQu-2m-KoT" id="LM1-IU-PZV"/>
+                                    <segue destination="WQT-o1-gnP" kind="showDetail" id="wZO-oW-0Mt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -73,6 +75,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEB-Hd-5t5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-475.38461538461536" y="-33.412322274881518"/>
+        </scene>
+        <!--DetailVC-->
+        <scene sceneID="wyl-Id-wqJ">
+            <objects>
+                <viewController id="WQT-o1-gnP" customClass="DetailVC" customModule="Song_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SuC-Oe-H9P">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Uf-w4-y2w" userLabel="SongImage">
+                                <rect key="frame" x="75" y="67" width="240" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Uf-w4-y2w" secondAttribute="height" multiplier="10:8" id="gkO-az-9eY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Px-Pi-O4y">
+                                <rect key="frame" x="100" y="279" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2w-oz-lSD">
+                                <rect key="frame" x="50" y="320" width="290" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="xmg-yR-oCw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMy-nU-lyO">
+                                <rect key="frame" x="100" y="490" width="190" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0m-vG-EfJ">
+                                <rect key="frame" x="24" y="531" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pog-Ge-eCl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Px-Pi-O4y" firstAttribute="top" secondItem="9Uf-w4-y2w" secondAttribute="bottom" constant="20" id="3Yh-lB-hbB"/>
+                            <constraint firstItem="0Px-Pi-O4y" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="100" id="5wf-h2-4TJ"/>
+                            <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="9Uf-w4-y2w" secondAttribute="trailing" constant="75" id="CSl-j9-ylr"/>
+                            <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="KMy-nU-lyO" secondAttribute="trailing" constant="100" id="CeJ-mr-pYw"/>
+                            <constraint firstItem="9Uf-w4-y2w" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="75" id="ET9-BO-AqD"/>
+                            <constraint firstItem="KMy-nU-lyO" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="100" id="VTv-KF-5ar"/>
+                            <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="Y2w-oz-lSD" secondAttribute="trailing" constant="50" id="aSI-Em-Q8t"/>
+                            <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="0Px-Pi-O4y" secondAttribute="trailing" constant="100" id="adN-iO-EU5"/>
+                            <constraint firstItem="Y2w-oz-lSD" firstAttribute="top" secondItem="0Px-Pi-O4y" secondAttribute="bottom" constant="20" id="eAT-Yd-KEQ"/>
+                            <constraint firstItem="Y2w-oz-lSD" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="50" id="qvQ-OQ-4aj"/>
+                            <constraint firstItem="9Uf-w4-y2w" firstAttribute="top" secondItem="Pog-Ge-eCl" secondAttribute="top" constant="20" id="vey-br-N5M"/>
+                            <constraint firstItem="KMy-nU-lyO" firstAttribute="top" secondItem="Y2w-oz-lSD" secondAttribute="bottom" constant="20" id="vx9-X9-htS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1o-Bz-RqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350.76923076923077" y="-33.412322274881518"/>
         </scene>
     </scenes>
     <resources>

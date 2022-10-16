@@ -13,7 +13,12 @@ class MainVC : UITableViewController {
                 Song(songName: "I'm Still Standing", songAuthor: "Elton Jhon", songImageUrl: "https://m.media-amazon.com/images/I/61pWVkK-PRL._SL1280_.jpg"),
                 Song(songName: "It's my Life", songAuthor: "Bon Jovi", songImageUrl: "https://m.media-amazon.com/images/I/5152DjOpXsL._SX355_.jpg"),
                 Song(songName: "Me Porto Bonito", songAuthor: "Bad Bunny, Checho Corleone", songImageUrl: "https://i.scdn.co/image/ab67616d0000b27349d694203245f241a1bcaa72"),
-                Song(songName: "Lo sabía", songAuthor: "Babi", songImageUrl: "https://i1.sndcdn.com/artworks-D54nGkc0dPvO-0-t500x500.jpg")]
+                Song(songName: "Lo sabía", songAuthor: "Babi", songImageUrl: "https://i1.sndcdn.com/artworks-D54nGkc0dPvO-0-t500x500.jpg"),
+                Song(songName: "A Medias Verdades", songAuthor: "Abhir Hathi", songImageUrl: "https://images.genius.com/6533c9cfc356ab23aaa956fe04609878.1000x1000x1.jpg"),
+                Song(songName: "Banksy", songAuthor: "Recycled J", songImageUrl: "https://www.mondosonoro.com/wp-content/uploads/2021/09/Recycled-J-Sad-Summer.jpg"),
+                Song(songName: "Hospital for Souls", songAuthor: "Bring me the Horizon", songImageUrl: "https://i.scdn.co/image/ab67616d0000b27360cf7c8dd93815ccd6cb4830"),
+                Song(songName: "Sudores Fríos", songAuthor: "Natos y Waor & Recycled J", songImageUrl: "https://natosywaor.com/wp-content/uploads/2021/04/cd-hijos-de-la-ruina-vol-3-1.jpg"),
+                Song(songName: "Suicide Season", songAuthor: "Bring me the Horizon", songImageUrl: "https://m.media-amazon.com/images/I/51XvDTAGK+L._SY355_.jpg")]
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return music.count
@@ -24,10 +29,13 @@ class MainVC : UITableViewController {
         songsCell.lbSong.text = music[indexPath.row].getTitle()
         songsCell.lbAuthor.text = music[indexPath.row].getAuthor()
         
-        let url = URL(string: music[indexPath.row].getImageUrl())
-        let data = try? Data(contentsOf: url!)
-        let loadedImage: UIImage = UIImage(data: data!)!
-        songsCell.ivPhoto.image = loadedImage
+        if let url = URL(string: music[indexPath.row].getImageUrl()){
+            songsCell.ivPhoto.loadImage(from: url)
+        }
+        //let url = URL(string: music[indexPath.row].getImageUrl())
+        //let data = try? Data(contentsOf: url!)
+        //let loadedImage: UIImage = UIImage(data: data!)!
+        //songsCell.ivPhoto.image = loadedImage
         
         return songsCell
     }
@@ -53,7 +61,4 @@ class MainVC : UITableViewController {
         super.viewDidLoad()
         self.tableView.isEditing = true
     }
-
-
 }
-
