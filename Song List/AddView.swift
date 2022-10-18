@@ -30,14 +30,65 @@ class AddView: UIViewController {
     }
     
     @IBAction func btnAdd(_ sender: Any) {
-        if songName.isEmpty {
-            print("muere")
-        } else {
-            print("Navego y añado")
-        }
+        
     }
     
-    
+    // MARK: - Dialogo para la cámara y galería
+    @IBAction func btnImage(_ sender: Any) {
+        let alert = UIAlertController(title: "De donde quieres sacar la foto", message: "Cámara o Galería", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cámara", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                let takePhoto = UIImagePickerController()
+                takePhoto.delegate = self
+                takePhoto.sourceType = .camera
+                takePhoto.isEditing = true
+                self.present(takePhoto, animated: true)
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+            default:
+                return
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Galería", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                let uploadPhoto = UIImagePickerController()
+                uploadPhoto.delegate = self
+                uploadPhoto.sourceType = .photoLibrary
+                uploadPhoto.isEditing = true
+                self.present(uploadPhoto, animated: true)
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+            default:
+                return
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Cerrar", style: .default, handler: { action in
+            switch action.style{
+            case .default:
+                print("todo ok")
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+            default:
+                return
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    // MARK: - Fin del diálogo
     
     /*
      // MARK: - Navigation
@@ -51,3 +102,20 @@ class AddView: UIViewController {
     
 }
 
+extension AddView : UIImagePickerControllerDelegate & UINavigationControllerDelegate{
+    func imagePickerControllerDidCancel(_ picker : UIImagePickerController){
+        picker.dismiss(animated: true)
+    }
+    func imagePickerController(_ picker : UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        
+        let key = UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)
+        
+        if let image = info[key] as? UIImage{
+            print(image)
+            self.ivUploadImage.image = image
+            picker.dismiss(animated: true)
+        }
+    }
+    
+}

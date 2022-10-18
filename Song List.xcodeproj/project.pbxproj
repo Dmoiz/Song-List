@@ -74,6 +74,7 @@
 				2FDC6DFC28ECAD020082C3DD /* SceneDelegate.swift */,
 				2FDC6DFE28ECAD020082C3DD /* ViewController.swift */,
 				2FCFD55A28F88FF400F9B11A /* SongDetailView.swift */,
+				2F1E2C0A28FEFF67009FEB01 /* AddView.swift */,
 				2FDC6E1428ECB6400082C3DD /* DataSong.swift */,
 				2FF0128A28EF52FD00BC43A4 /* SongCell.swift */,
 				2FF0128828EF52C000BC43A4 /* Song.swift */,
@@ -83,7 +84,6 @@
 				2FDC6E0328ECAD030082C3DD /* Assets.xcassets */,
 				2FDC6E0528ECAD030082C3DD /* LaunchScreen.storyboard */,
 				2FDC6E0828ECAD030082C3DD /* Info.plist */,
-				2F1E2C0A28FEFF67009FEB01 /* AddView.swift */,
 			);
 			path = "Song List";
 			sourceTree = "<group>";

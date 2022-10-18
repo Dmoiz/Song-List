@@ -11,7 +11,8 @@ import UIKit
 class MainVC : UITableViewController {
     
     var music =
-    [Song(songName: "Twilight", songAuthor: "Rojuu", songImageUrl: "https://images.genius.com/24df596c2e657d773c3e6bc9477a1a25.1000x1000x1.jpg", songGenre: "Pop"),
+    [Song(songName: "Twilight", songAuthor: "Rojuu\n\nLETRA\n\nCarzé is the fucking boss\n(¿Roku?)\nYo sé que mi cora contigo está seguro\nYo sé que si sigue así,\n nos sobra futuro\nPorque yo solo sonrío cuando hablo de ti\nProméteme que siempre cuidarás de mí",
+          songImageUrl: "https://images.genius.com/24df596c2e657d773c3e6bc9477a1a25.1000x1000x1.jpg", songGenre: "Pop"),
      Song(songName: "I'm Still Standing", songAuthor: "Elton Jhon", songImageUrl: "https://m.media-amazon.com/images/I/61pWVkK-PRL._SL1280_.jpg", songGenre: "Pop"),
      Song(songName: "Me Porto Bonito", songAuthor: "Bad Bunny, Checho Corleone", songImageUrl: "https://i.scdn.co/image/ab67616d0000b27349d694203245f241a1bcaa72", songGenre: "Música Latina"),
      Song(songName: "Lo sabía", songAuthor: "Babi", songImageUrl: "https://i1.sndcdn.com/artworks-D54nGkc0dPvO-0-t500x500.jpg", songGenre: "Pop"),

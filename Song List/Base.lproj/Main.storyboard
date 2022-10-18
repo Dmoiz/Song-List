@@ -103,7 +103,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-J7-QNY" userLabel="Image">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J73-wF-hJq">
+                                <rect key="frame" x="120" y="89" width="150" height="147"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="btnImage:" destination="2yz-IM-E3N" eventType="touchUpInside" id="KG2-DV-jys"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-J7-QNY" userLabel="Image">
                                 <rect key="frame" x="120" y="87.999999999999986" width="150" height="148.66666666666669"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
@@ -139,6 +148,7 @@
                         <viewLayoutGuide key="safeArea" id="ReB-hW-0Y4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="J73-wF-hJq" firstAttribute="top" secondItem="ReB-hW-0Y4" secondAttribute="top" constant="42" id="40Z-oG-9OD"/>
                             <constraint firstItem="g9E-vF-vcv" firstAttribute="leading" secondItem="ReB-hW-0Y4" secondAttribute="leading" constant="100" id="6qN-A2-asa"/>
                             <constraint firstItem="7h3-J7-QNY" firstAttribute="top" secondItem="ReB-hW-0Y4" secondAttribute="top" constant="40" id="7SG-Or-6qi"/>
                             <constraint firstItem="Pz0-Zb-e6L" firstAttribute="trailing" secondItem="ReB-hW-0Y4" secondAttribute="trailing" id="Iif-eV-88p"/>
@@ -147,12 +157,15 @@
                             <constraint firstItem="ReB-hW-0Y4" firstAttribute="trailing" secondItem="Sce-JG-Csz" secondAttribute="trailing" constant="150" id="Yad-l2-A3N"/>
                             <constraint firstItem="ReB-hW-0Y4" firstAttribute="trailing" secondItem="YG0-bZ-WSB" secondAttribute="trailing" constant="100" id="f3e-Ni-WM8"/>
                             <constraint firstItem="ReB-hW-0Y4" firstAttribute="trailing" secondItem="g9E-vF-vcv" secondAttribute="trailing" constant="100" id="kPX-cA-fmi"/>
+                            <constraint firstItem="J73-wF-hJq" firstAttribute="leading" secondItem="ReB-hW-0Y4" secondAttribute="leading" constant="120" id="lNa-sL-6ww"/>
                             <constraint firstItem="Sce-JG-Csz" firstAttribute="leading" secondItem="ReB-hW-0Y4" secondAttribute="leading" constant="150" id="lci-aO-cKN"/>
+                            <constraint firstItem="YG0-bZ-WSB" firstAttribute="top" secondItem="J73-wF-hJq" secondAttribute="bottom" constant="21" id="nvC-al-VjL"/>
                             <constraint firstItem="YG0-bZ-WSB" firstAttribute="leading" secondItem="ReB-hW-0Y4" secondAttribute="leading" constant="100" id="oDk-R2-IBa"/>
                             <constraint firstItem="Sce-JG-Csz" firstAttribute="top" secondItem="Pz0-Zb-e6L" secondAttribute="bottom" constant="10" id="tGx-lm-P3z"/>
                             <constraint firstItem="g9E-vF-vcv" firstAttribute="top" secondItem="YG0-bZ-WSB" secondAttribute="bottom" constant="20" id="tW3-yx-Fac"/>
                             <constraint firstItem="ReB-hW-0Y4" firstAttribute="trailing" secondItem="7h3-J7-QNY" secondAttribute="trailing" constant="120" id="uJb-Ud-97p"/>
                             <constraint firstItem="Pz0-Zb-e6L" firstAttribute="top" secondItem="g9E-vF-vcv" secondAttribute="bottom" constant="50" id="vyO-tx-RRb"/>
+                            <constraint firstItem="ReB-hW-0Y4" firstAttribute="trailing" secondItem="J73-wF-hJq" secondAttribute="trailing" constant="120" id="wez-La-IDu"/>
                             <constraint firstItem="7h3-J7-QNY" firstAttribute="leading" secondItem="ReB-hW-0Y4" secondAttribute="leading" constant="120" id="zTu-P2-MyE"/>
                         </constraints>
                     </view>
@@ -166,11 +179,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzQ-D5-cG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="337" y="-33"/>
+            <point key="canvasLocation" x="336.92307692307691" y="-33.412322274881518"/>
         </scene>
-        <!--Item-->
+        <!--DetailVC-->
         <scene sceneID="wyl-Id-wqJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1o-Bz-RqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="WQT-o1-gnP" customClass="DetailVC" customModule="Song_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SuC-Oe-H9P">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
@@ -188,24 +202,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Desc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="126-cT-Zdb" userLabel="Song Desc">
-                                <rect key="frame" x="100" y="320" width="190" height="78"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="TDu-67-hDe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Genre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUO-sW-LAc">
-                                <rect key="frame" x="100" y="448" width="190" height="21"/>
+                                <rect key="frame" x="100" y="490" width="190" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIv-zE-YnF" customClass="PickerView" customModule="Song_List" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="489" width="390" height="216"/>
+                                <rect key="frame" x="0.0" y="531" width="390" height="216"/>
                             </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb3-8J-F16">
+                                <rect key="frame" x="75" y="310" width="240" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="epA-iE-KXj"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pog-Ge-eCl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -215,29 +231,27 @@
                             <constraint firstItem="0Px-Pi-O4y" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="100" id="5wf-h2-4TJ"/>
                             <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="9Uf-w4-y2w" secondAttribute="trailing" constant="75" id="CSl-j9-ylr"/>
                             <constraint firstItem="9Uf-w4-y2w" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="75" id="ET9-BO-AqD"/>
-                            <constraint firstItem="126-cT-Zdb" firstAttribute="top" secondItem="0Px-Pi-O4y" secondAttribute="bottom" constant="20" id="GR1-Fe-C7Y"/>
-                            <constraint firstItem="BUO-sW-LAc" firstAttribute="top" secondItem="126-cT-Zdb" secondAttribute="bottom" constant="50" id="UdW-ka-cDz"/>
-                            <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="126-cT-Zdb" secondAttribute="trailing" constant="100" id="Vrt-zd-lal"/>
+                            <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="Wb3-8J-F16" secondAttribute="trailing" constant="75" id="M7V-af-kfD"/>
                             <constraint firstItem="Pog-Ge-eCl" firstAttribute="trailing" secondItem="0Px-Pi-O4y" secondAttribute="trailing" constant="100" id="adN-iO-EU5"/>
                             <constraint firstItem="BUO-sW-LAc" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="100" id="buC-IT-et8"/>
                             <constraint firstItem="gIv-zE-YnF" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" id="egJ-hX-gwH"/>
-                            <constraint firstItem="126-cT-Zdb" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="100" id="oIJ-k6-2dD"/>
+                            <constraint firstItem="Wb3-8J-F16" firstAttribute="top" secondItem="0Px-Pi-O4y" secondAttribute="bottom" constant="10" id="o0Y-dz-b1V"/>
                             <constraint firstItem="gIv-zE-YnF" firstAttribute="top" secondItem="BUO-sW-LAc" secondAttribute="bottom" constant="20" id="u9W-s8-bwc"/>
                             <constraint firstItem="9Uf-w4-y2w" firstAttribute="top" secondItem="Pog-Ge-eCl" secondAttribute="top" constant="20" id="vey-br-N5M"/>
+                            <constraint firstItem="Wb3-8J-F16" firstAttribute="leading" secondItem="Pog-Ge-eCl" secondAttribute="leading" constant="75" id="w2N-eG-Q9U"/>
+                            <constraint firstItem="BUO-sW-LAc" firstAttribute="top" secondItem="Wb3-8J-F16" secondAttribute="bottom" constant="30" id="xJp-gm-mzo"/>
                             <constraint firstItem="gIv-zE-YnF" firstAttribute="trailing" secondItem="Pog-Ge-eCl" secondAttribute="trailing" id="xds-G4-acJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dzc-jo-db7"/>
                     <navigationItem key="navigationItem" id="ajm-fg-aA4"/>
                     <connections>
                         <outlet property="ivImage" destination="9Uf-w4-y2w" id="eNk-ec-Mju"/>
                         <outlet property="lbGenre" destination="BUO-sW-LAc" id="QfK-38-KZx"/>
-                        <outlet property="lbSongDesc" destination="126-cT-Zdb" id="14O-aK-khd"/>
                         <outlet property="lbSongName" destination="0Px-Pi-O4y" id="cOf-hw-mr3"/>
                         <outlet property="pvGenres" destination="gIv-zE-YnF" id="ZlQ-Ph-1nm"/>
+                        <outlet property="tvSongDesc" destination="Wb3-8J-F16" id="dcG-qb-89B"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a1o-Bz-RqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-475" y="689"/>
         </scene>
@@ -252,6 +266,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
