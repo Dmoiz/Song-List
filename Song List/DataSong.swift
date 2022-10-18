@@ -11,10 +11,12 @@ protocol dataSongs {
     var imageUrl: String { get set}
     var song: String { get set}
     var author: String { get set}
+    var genre : String { get set}
     
     // Getters
     func getImageUrl() -> String
     func getTitle() -> String
     func getAuthor() -> String
+    func getGenre() -> String
 
 }

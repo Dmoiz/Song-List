@@ -9,15 +9,17 @@ import UIKit
 
 class Song : dataSongs {
     
-    init(songName : String, songAuthor : String, songImageUrl : String){
+    init(songName : String, songAuthor : String, songImageUrl : String, songGenre : String){
         song = songName
         author = songAuthor
         imageUrl = songImageUrl
+        genre = songGenre
     }
     
     var song: String = ""
     var author: String = ""
     var imageUrl: String = ""
+    var genre : String = ""
     
     func getTitle() -> String {
         return song
@@ -29,6 +31,10 @@ class Song : dataSongs {
     
     func getImageUrl() -> String {
         return imageUrl
+    }
+    
+    func getGenre() -> String {
+        return genre
     }
     
 }
