@@ -22,7 +22,7 @@ class ImageViewCustom : UIImageView{
         if let task = task{
             task.cancel()
         }
-        //Cargar las inagenes en cache y asegurarse de que no se ejecute más código después del return
+        //Cargar las imagenes en cache y asegurarse de que no se ejecute más código después del return
         if let imageFromCache = imageCache.object(forKey: url.absoluteString as AnyObject) as? UIImage{
             image = imageFromCache
             removeSpinner()

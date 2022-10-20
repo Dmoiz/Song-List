@@ -12,6 +12,7 @@
         <scene sceneID="ChO-ng-kci">
             <objects>
                 <tabBarController id="Axl-WN-ubf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MOJ-CA-a3H"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SqZ-SU-BB7">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -90,10 +91,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Music" image="music.note.list" catalog="system" id="alb-M8-Oy3"/>
+                    <navigationItem key="navigationItem" id="1t3-T3-s9W"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEB-Hd-5t5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475.38461538461536" y="-33.412322274881518"/>
+            <point key="canvasLocation" x="354" y="-33"/>
         </scene>
         <!--Add-->
         <scene sceneID="Vby-gt-dow">
@@ -104,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J73-wF-hJq">
-                                <rect key="frame" x="120" y="89" width="150" height="147"/>
+                                <rect key="frame" x="120" y="185" width="150" height="147"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
@@ -112,21 +114,21 @@
                                     <action selector="btnImage:" destination="2yz-IM-E3N" eventType="touchUpInside" id="KG2-DV-jys"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-J7-QNY" userLabel="Image">
-                                <rect key="frame" x="120" y="87.999999999999986" width="150" height="148.66666666666669"/>
-                                <color key="backgroundColor" systemColor="labelColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill.on.rectangle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-J7-QNY" userLabel="Image">
+                                <rect key="frame" x="120" y="183.66666666666669" width="150" height="148.66666666666666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="BJ4-tQ-YHW"/>
                                     <constraint firstAttribute="width" constant="150" id="DRX-1a-iE6"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Song Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YG0-bZ-WSB">
-                                <rect key="frame" x="100" y="257" width="190" height="29"/>
+                                <rect key="frame" x="100" y="353" width="190" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Song Description" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-vF-vcv" userLabel="Song Desc">
-                                <rect key="frame" x="100" y="306" width="190" height="70"/>
+                                <rect key="frame" x="100" y="402" width="190" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="EPy-hR-FUk"/>
                                 </constraints>
@@ -134,10 +136,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pz0-Zb-e6L" customClass="PickerView" customModule="Song_List">
-                                <rect key="frame" x="0.0" y="426" width="390" height="216"/>
+                                <rect key="frame" x="0.0" y="522" width="390" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sce-JG-Csz">
-                                <rect key="frame" x="150" y="652" width="90" height="35"/>
+                                <rect key="frame" x="150" y="748" width="90" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add"/>
                                 <connections>
@@ -170,6 +172,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="plus" catalog="system" id="l1V-L3-yjD"/>
+                    <navigationItem key="navigationItem" id="1yh-Kw-XL5"/>
                     <connections>
                         <outlet property="ivUploadImage" destination="7h3-J7-QNY" id="k5x-Gk-ift"/>
                         <outlet property="lbSongDesc" destination="g9E-vF-vcv" id="4uk-db-tCO"/>
@@ -179,12 +182,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzQ-D5-cG2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336.92307692307691" y="-33.412322274881518"/>
+            <point key="canvasLocation" x="-592" y="-33"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="wyl-Id-wqJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a1o-Bz-RqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="WQT-o1-gnP" customClass="DetailVC" customModule="Song_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SuC-Oe-H9P">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
@@ -252,15 +254,35 @@
                         <outlet property="tvSongDesc" destination="Wb3-8J-F16" id="dcG-qb-89B"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1o-Bz-RqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475" y="689"/>
+            <point key="canvasLocation" x="354" y="697"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BSF-tb-fqU">
+            <objects>
+                <navigationController id="wkA-Wc-18G" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ayq-XY-oYY">
+                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2yz-IM-E3N" kind="relationship" relationship="rootViewController" id="0S2-x3-XM0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NSQ-9f-ts5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1125" y="-769"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0S2-x3-XM0"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="120" height="163.33332824707031"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
+        <image name="photo.fill.on.rectangle.fill" catalog="system" width="128" height="98"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
